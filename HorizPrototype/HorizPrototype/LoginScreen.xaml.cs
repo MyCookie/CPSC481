@@ -16,18 +16,24 @@ using System.Windows.Shapes;
 namespace HorizPrototype
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginScreen.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginScreen : UserControl
     {
-
-        public MainWindow()
+        public LoginScreen()
         {
-            LoginScreen lgs = new LoginScreen();
             InitializeComponent();
-            MainStackPanel.Children.Add(lgs);
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
 
+        private void UserNameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            UserNameTextBox.Clear();
+        }
     }
 }

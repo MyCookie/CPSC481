@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace HorizPrototype
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainScreen.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainScreen : UserControl
     {
-
-        public MainWindow()
+        public MainScreen()
         {
-            LoginScreen lgs = new LoginScreen();
             InitializeComponent();
-            MainStackPanel.Children.Add(lgs);
-
         }
-
     }
 }

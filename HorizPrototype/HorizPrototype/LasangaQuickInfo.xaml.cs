@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace HorizPrototype
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LasangaQuickInfo.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LasangaQuickInfo : UserControl
     {
-
-        public MainWindow()
+        public LasangaQuickInfo()
         {
-            LoginScreen lgs = new LoginScreen();
             InitializeComponent();
-            MainStackPanel.Children.Add(lgs);
-
         }
-
     }
 }
