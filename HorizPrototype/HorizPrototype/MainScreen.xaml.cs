@@ -20,9 +20,30 @@ namespace HorizPrototype
     /// </summary>
     public partial class MainScreen : UserControl
     {
+        public static RecipieButton lasagnaB;
+        public static RecipieButton spaghettiB;
+
         public MainScreen()
         {
             InitializeComponent();
+            lasagnaB = new RecipieButton();
+            lasagnaB.RecipeName.Content = "Lasagna";
+            lasagnaB.RecipeTime.Content = "25";
+            spaghettiB = new RecipieButton();
+            spaghettiB.RecipeName.Content = "Spaghetti";
+            spaghettiB.RecipeTime.Content = "15";
+            RecipeListPanel.Children.Add(lasagnaB);
+            RecipeListPanel.Children.Add(spaghettiB);
+            UserControl quickInfo = new LasangaQuickInfo();
+            QuickInfoPanel.Children.Add(quickInfo);
+            try
+            {
+                RecipeListPanel.Children.Add(lasagnaB);
+                RecipeListPanel.Children.Add(spaghettiB);
+            } catch (Exception e)
+            {
+                System.Console.WriteLine("erooor");
+            }
         }
     }
 }

@@ -8,10 +8,10 @@
     <Grid>
 
         <ScrollViewer Name="MainScreenScrollView" Height="344.5" Width="470" Margin="0,344,0,0">
-
+            <StackPanel x:Name="RecipeListPanel"/>
         </ScrollViewer>
-        <Image HorizontalAlignment="Left" Height="50" Margin="410,10,0,0" VerticalAlignment="Top" Width="50" Source="mag_glass.png"/>
         <StackPanel Name="QuickInfoPanel" HorizontalAlignment="Left" Height="274" Margin="10,65,0,0" VerticalAlignment="Top" Width="450"/>
-        <Label x:Name="HomeLabel" Content="Don't Burn Your House Down" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="28" FontFamily="Garamond"/>
+        <Label x:Name="HomeLabel" Content="Don't Burn Your House Down" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="28" FontFamily="Sogue"/>
+        <Button x:Name="SearchButton" Height="50" Width="50" Margin="410,10,10,629" FontFamily="Segoe UI Symbol" FontSize="37.333" Content="&#xE11A;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}"/>
     </Grid>
 </UserControl>

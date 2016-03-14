@@ -56,6 +56,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="RecipieButton.xaml.cs">
+      <DependentUpon>RecipieButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SpaghettiQuickInfo.xaml.cs">
+      <DependentUpon>SpaghettiQuickInfo.xaml</DependentUpon>
+    </Compile>
     <Page Include="LasangaQuickInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,6 +95,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RecipieButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpaghettiQuickInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -118,12 +132,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="facebook_login_button.png" />
-    <Resource Include="gplus_signin.png" />
-    <Resource Include="sign-in-with-twitter-gray.png" />
+    <Resource Include="search-button.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mag_glass.png" />
+    <Resource Include="images\lasagna\lasagna.jpg" />
+    <Resource Include="images\lasagna\lasagna1.jpg" />
+    <Resource Include="images\lasagna\lasagna2.jpg" />
+    <Resource Include="images\lasagna\lasagna3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\spaghetti\spaghetti.jpg" />
+    <Resource Include="images\spaghetti\spaghetti1.jpg" />
+    <Resource Include="images\spaghetti\spaghetti2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

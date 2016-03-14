@@ -6,7 +6,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="274" d:DesignWidth="450">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="100" Margin="170,68,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="LasangaQuickInfoImage" Height="158" Margin="70,10,60,106" Width="320" Source="images/lasagna/lasagna.jpg"/>
+        <Button x:Name="Right" Margin="390,80,10,118" Height="75" Width="50" FontFamily="Consolas" FontSize="64" FontWeight="Bold" Content=">" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}" Click="Right_Click"></Button>
+        <Button x:Name="Left" Margin="10,80,390,118" Height="75" Width="50" FontFamily="Consolas" FontSize="64" FontWeight="Bold" Content="&lt;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}"></Button>
+        <Label x:Name="Rating" Margin="10,213,283,10" Content="&#xE1CF;&#xE1CF;&#xE1CF;&#xE1CF;&#xE1CE;" FontFamily="Segoe UI Symbol" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24"></Label>
+        <Label x:Name="Time" Margin="10,173,283,61" Content="25 minutes" FontSize="21.333" HorizontalContentAlignment="Left"></Label>
+        <Label x:Name="Difficulty" Margin="172,173,10,61" Content="easy &#x1f374;&#x1f374;&#x1f374;&#x1f374;&#xE18A;&#xE18A;&#xE18A; hard" FontSize="21.333" FontFamily="Segoe UI Symbol" HorizontalContentAlignment="Right"></Label>
+        <Button x:Name="MoreInfo" Margin="312,218,10,10" Background="{x:Null}" Content="More" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="21.333"></Button>
 
     </Grid>
 </UserControl>

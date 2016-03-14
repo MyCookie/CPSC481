@@ -20,14 +20,17 @@ namespace HorizPrototype
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static LoginScreen lgs;
+        public static MainScreen msn;
 
         public MainWindow()
         {
-            LoginScreen lgs = new LoginScreen();
             InitializeComponent();
-            MainStackPanel.Children.Add(lgs);
+            lgs = new LoginScreen();
+            msn = new MainScreen();
+            LasangaQuickInfo l = new LasangaQuickInfo();
 
+            MainStackPanel.Children.Add(msn);
         }
-
     }
 }
