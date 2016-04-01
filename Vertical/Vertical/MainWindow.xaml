@@ -1,0 +1,9 @@
+﻿<Window x:Class="Vertical.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="680" Width="480">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="649" VerticalAlignment="Top" Width="472"/>
+
+    </Grid>
+</Window>
