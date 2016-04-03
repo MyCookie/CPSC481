@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7C04C2D-086D-4D21-922F-F5E789EF4BDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vertical</RootNamespace>
+    <AssemblyName>Vertical</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BeanStat.xaml.cs">
+      <DependentUpon>BeanStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlackBean.xaml.cs">
+      <DependentUpon>BlackBean.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ButterChicken.xaml.cs">
+      <DependentUpon>ButterChicken.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ButterStat.xaml.cs">
+      <DependentUpon>ButterStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enchiladas.xaml.cs">
+      <DependentUpon>Enchiladas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EnchiladasStat.xaml.cs">
+      <DependentUpon>EnchiladasStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Favourite.xaml.cs">
+      <DependentUpon>Favourite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinalMash.xaml.cs">
+      <DependentUpon>FinalMash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hummus.xaml.cs">
+      <DependentUpon>Hummus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HummusStat.xaml.cs">
+      <DependentUpon>HummusStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MacCheese.xaml.cs">
+      <DependentUpon>MacCheese.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MacStats.xaml.cs">
+      <DependentUpon>MacStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mashed.xaml.cs">
+      <DependentUpon>Mashed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MashIng.xaml.cs">
+      <DependentUpon>MashIng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MashInstructions.xaml.cs">
+      <DependentUpon>MashInstructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MashInstructions2.xaml.cs">
+      <DependentUpon>MashInstructions2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MashInstructions3.xaml.cs">
+      <DependentUpon>MashInstructions3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MashInstructions4.xaml.cs">
+      <DependentUpon>MashInstructions4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MashInstructions5.xaml.cs">
+      <DependentUpon>MashInstructions5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MashStat.xaml.cs">
+      <DependentUpon>MashStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoreMashPictures.xaml.cs">
+      <DependentUpon>MoreMashPictures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PorkLoin.xaml.cs">
+      <DependentUpon>PorkLoin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PorkStat.xaml.cs">
+      <DependentUpon>PorkStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollViewer1.xaml.cs">
+      <DependentUpon>ScrollViewer1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SweetPotato.xaml.cs">
+      <DependentUpon>SweetPotato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SweetStat.xaml.cs">
+      <DependentUpon>SweetStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Switcher.cs" />
+    <Compile Include="ToDo.xaml.cs">
+      <DependentUpon>ToDo.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BeanStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlackBean.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ButterChicken.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ButterStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Enchiladas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnchiladasStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Favourite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinalMash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hummus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HummusStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MacCheese.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MacStats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.xaml.cs">
+      <DependentUpon>LoginScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Mashed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MashIng.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MashInstructions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MashInstructions2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MashInstructions3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MashInstructions4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MashInstructions5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MashStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoreMashPictures.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PorkLoin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PorkStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScrollViewer1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SweetPotato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SweetStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToDo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\favourite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Recipes\porkchop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Recipes\chickenenchal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Recipes\macroni&amp;cheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Recipes\burgerblackbean.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Recipes\hummus.jpg" />
+    <Resource Include="Pictures\Recipes\mashed pat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Recipes\butter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Recipes\sweet pat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\todo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\brokenheart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\5_Star_Rating_System_2_and_a_half_stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Blaze_test1_WMV-WMV9MP_CBR_320x240_AR4to3_15fps_512kbps_WMA9.2L2_32kbps_44100Hz_Mono.wmv" />
+    <Resource Include="Pictures\5_Star_Rating_System_4_and_a_half_stars.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_3_and_a_half_stars.png" />
+    <Content Include="Pictures\How_to_Make_Top_Secret_Garlic_Mashed_Potatoes.wmv" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
