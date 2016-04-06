@@ -12,12 +12,12 @@
         <Label Content="This is my secret recipe for Garlic&#xD;&#xA;Mashed potatoes, reverse &#xD;&#xA;engineered from a certain &#xD;&#xA;Italian restaurant.&#xA;&#xD;&#xA;Difficulty&#xA;&#xA;         30 min&#xA;&#xA;Rating&#xA;&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="190" Width="196"/>
         <Image HorizontalAlignment="Left" Height="35" Margin="10,120,0,0" VerticalAlignment="Top" Width="28" Source="Pictures/clock.png"/>
         <Image HorizontalAlignment="Left" Height="20" Margin="15,180,0,0" VerticalAlignment="Top" Width="100" Source="Pictures/5_Star_Rating_System_2_and_a_half_stars.png"/>
-        <Button Content="Ingredients" HorizontalAlignment="Left" Margin="23,247,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="5.454,1.818" Click="Button_Click_1"/>
-        <Button Content="Cook now!" HorizontalAlignment="Left" Margin="115,220,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click" Height="49"/>
+        <Button Content="Ingredients" HorizontalAlignment="Left" Margin="15,247,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="5.454,1.818" Click="Button_Click_1" Height="22"/>
+        <Button Content="Cook now!" Margin="115,220,94,0" VerticalAlignment="Top" Click="Button_Click" Height="49"/>
         <Rectangle HorizontalAlignment="Left" Height="22" Margin="75,96,0,0" Stroke="Black" VerticalAlignment="Top" Width="19" OpacityMask="Black" Fill="#FF7EFF12"/>
         <Rectangle Fill="#FF13F01D" HorizontalAlignment="Left" Height="22" Stroke="Black" VerticalAlignment="Top" Width="26" Margin="94,96,0,0" RenderTransformOrigin="-0.12,0.591"/>
         <Rectangle HorizontalAlignment="Left" Height="22" Stroke="Black" VerticalAlignment="Top" Width="54" Margin="120,96,0,0"/>
-        <Button Content="More pictures" HorizontalAlignment="Left" Margin="24,220,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="morePictures" Content="More pictures" HorizontalAlignment="Left" Margin="15,220,0,0" VerticalAlignment="Top" Width="84" Click="morePictures_Click" Height="22"/>
 
     </Grid>
 </UserControl>

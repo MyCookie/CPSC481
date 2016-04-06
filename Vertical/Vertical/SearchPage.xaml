@@ -7,17 +7,19 @@
              d:DesignHeight="620" d:DesignWidth="480">
     <Grid Background="#FFF0E1E1" Margin="0,0,-18,0">
         <Label Content="       Search Page" HorizontalAlignment="Left" VerticalAlignment="Top" Height="104" Width="498" FontSize="72" FontFamily="Pristina" Margin="0,-9,0,0"/>
-        <TextBox Name="searchBox" HorizontalAlignment="Left" Height="23" Margin="0,100,0,0" TextWrapping="Wrap" Text="Search.." VerticalAlignment="Top" Width="271" MouseDoubleClick="searchBox_MouseDoubleClick"/>
-        <StackPanel Name="searchPagePanel" HorizontalAlignment="Left" Height="985" Margin="0,167,0,-532" VerticalAlignment="Top" Width="249"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="271,101,0,0" VerticalAlignment="Top" Width="27" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click" RenderTransformOrigin="-1.222,0.591">
+        <TextBox Name="searchBox" HorizontalAlignment="Left" Height="23" Margin="0,100,0,0" TextWrapping="Wrap" Text="Search.." VerticalAlignment="Top" Width="271" MouseDoubleClick="searchBox_MouseDoubleClick" MouseDown="searchBox_MouseDown"/>
+        <StackPanel Name="searchPagePanel" HorizontalAlignment="Left" Height="1816" Margin="-568,140,0,-1336" VerticalAlignment="Top" Width="248" Background="#FF4BCF00"/>
+        <Button x:Name="searchButton" Content="Button" HorizontalAlignment="Left" Margin="271,101,0,0" VerticalAlignment="Top" Width="27" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="searchButton_Click" RenderTransformOrigin="-1.222,0.591">
             <Button.Background>
                 <ImageBrush ImageSource="Pictures/search.png"/>
             </Button.Background>
         </Button>
         <Label Name="resultl" Content="Your search results" HorizontalAlignment="Left" Margin="0,123,0,0" VerticalAlignment="Top" Width="360" FontSize="22"/>
-        <StackPanel Name="stat" HorizontalAlignment="Left" Height="985" Margin="249,167,0,-532" VerticalAlignment="Top" Width="249"/>
+        <StackPanel Name="stat" HorizontalAlignment="Left" Height="1816" Margin="-296,140,0,-1336" VerticalAlignment="Top" Width="250" Background="#FFF00A0A"/>
         <ComboBox Name="box" Margin="368,101,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="94" SelectionChanged="box_SelectionChanged"/>
         <Label Content="Sort By" HorizontalAlignment="Left" Margin="312,98,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <StackPanel x:Name="resultLeft" HorizontalAlignment="Left" Height="1098" Margin="0,162,0,-640" VerticalAlignment="Top" Width="250"/>
+        <StackPanel x:Name="resultRight" HorizontalAlignment="Right" Height="1098" Margin="248,162,0,-640" VerticalAlignment="Top" Width="250"/>
 
     </Grid>
 </UserControl>

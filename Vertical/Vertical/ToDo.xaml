@@ -7,6 +7,8 @@
              d:DesignHeight="620" d:DesignWidth="480">
     <Grid Background="#FFF0E1E1">
         <Label Content="        To do list" HorizontalAlignment="Right" VerticalAlignment="Top" Height="95" Width="470" FontSize="72" FontFamily="Pristina" Margin="0,0,10,0"/>
+        <StackPanel x:Name="todoLeftStackX" HorizontalAlignment="Left" Height="515" Margin="0,95,0,0" VerticalAlignment="Top" Width="240"/>
+        <StackPanel x:Name="todoRightStackX" HorizontalAlignment="Left" Height="515" Margin="240,95,0,0" VerticalAlignment="Top" Width="240"/>
 
     </Grid>
 </UserControl>

@@ -30,14 +30,26 @@ namespace Vertical
         public static Hummus hummus = new Hummus();
         public ScrollViewer1()
         {
+            //Make dislike invisible
             mc.dislike.Opacity = 0;
+            bb.dislike.Opacity = 0;
             mash.dislike.Opacity = 0;
             bc.dislike.Opacity = 0;
-            bb.dislike.Opacity = 0;
             sweet.dislike.Opacity = 0;
             hummus.dislike.Opacity = 0;
             ce.dislike.Opacity = 0;
             pl.dislike.Opacity = 0;
+
+            //Make todoRemove invisible
+            mc.todoRemove.Opacity = 0;
+            bb.todoRemove.Opacity = 0;
+            mash.todoRemove.Opacity = 0;
+            bc.todoRemove.Opacity = 0;
+            sweet.todoRemove.Opacity = 0;
+            hummus.todoRemove.Opacity = 0;
+            ce.todoRemove.Opacity = 0;
+            pl.todoRemove.Opacity = 0;
+
             InitializeComponent();
             stack.Children.Add(pl);
             stack.Children.Add(mc);
@@ -47,6 +59,17 @@ namespace Vertical
             stack1.Children.Add(ce);
             stack1.Children.Add(mash);
             stack1.Children.Add(bc);
+
+            //Initializing instance arrays
+            MacCheese.instanceArray[2] = mc;
+            BlackBean.instanceArray[2] = bb;
+            ButterChicken.instanceArray[2] = bc;
+            Enchiladas.instanceArray[2] = ce;
+            Hummus.instanceArray[2] = hummus;
+            Mashed.instanceArray[2] = mash;
+            PorkLoin.instanceArray[2] = pl;
+            SweetPotato.instanceArray[2] = sweet;
+            
         }
     }
 }

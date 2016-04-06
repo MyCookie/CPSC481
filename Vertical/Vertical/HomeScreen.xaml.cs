@@ -58,7 +58,6 @@ namespace Vertical
         {
             sph.Children.Clear();
             sv.ScrollToTop();
-            sph.Height = 615;
             sph.Children.Add(todo);
         }
     }

@@ -20,89 +20,157 @@ namespace Vertical
     /// </summary>
     public partial class Enchiladas : UserControl
     {
-        public static string[] Enchiladasattributes = new string[9];
-        public Boolean checkStatus = false;
-        public static int Enchtime = 15;
-        public int pos = 0;
+        public static bool checkStatus = false;
+        public static bool todoStatus = false;
+        public static int favColumn = -1; //Not in list
+        public static int todoColumn = -1; //Not in list
+
+
+        // 0 = Favourite; 1 = Todo; 2 = Home; 3 = Search
+        public static Enchiladas[] instanceArray = new Enchiladas[4];
+
+        //Sorting variables
+        public static int time = 45;
+        public static int difficulty = 30;
+        public static int ingredients = 10; 
+
+        public static string[] attributes = new string[9]; //UNFINISHED
         public Enchiladas()
         {
             InitializeComponent();
-            Enchiladasattributes[0] = "butter";
-            Enchiladasattributes[1] = "sour cream";
-            Enchiladasattributes[2] = "green onions";
-            Enchiladasattributes[3] = "onions";
-            Enchiladasattributes[4] = "garlic";
-            Enchiladasattributes[5] = "tortillas";
-            Enchiladasattributes[6] = "milk";
-            Enchiladasattributes[7] = "enchiladas";
-            Enchiladasattributes[8] = "chicken";
-
-
+            attributes[0] = "butter";
+            attributes[1] = "sour cream";
+            attributes[2] = "green onions";
+            attributes[3] = "onions";
+            attributes[4] = "garlic";
+            attributes[5] = "tortillas";
+            attributes[6] = "milk";
+            attributes[7] = "enchiladas";
+            attributes[8] = "chicken";
+            //UNFINISHED
 
         }
+
+
+        private void checkRefresh()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (checkStatus)
+                {
+                    instanceArray[i].like.Opacity = 0;
+                    instanceArray[i].dislike.Opacity = 100;
+                }
+                else
+                {
+                    instanceArray[i].like.Opacity = 100;
+                    instanceArray[i].dislike.Opacity = 0;
+                }
+                if (todoStatus)
+                {
+                    instanceArray[i].todoAdd.Opacity = 0;
+                    instanceArray[i].todoRemove.Opacity = 100;
+                }
+                else
+                {
+                    instanceArray[i].todoAdd.Opacity = 100;
+                    instanceArray[i].todoRemove.Opacity = 0;
+
+                }
+            }
+        }
+
         private void like_Click(object sender, RoutedEventArgs e)
         {
-            if (Favourite.check % 2 == 0)
+            if (!checkStatus)
             {
-                if (checkStatus == false)
+                checkStatus = true;
+                if (Favourite.check % 2 == 0) //Left side
                 {
                     Favourite.favouriteStack.Children.Add(Favourite.ce1);
-                    like.Opacity = 0;
-                    dislike.Opacity = 100;
-                    checkStatus = true;
-
+                    favColumn = 0; //Left side
                 }
-                Favourite.ce1.pos = -1;
-            }
-            else
-            {
-                if (checkStatus == false)
+                else //Right side
                 {
                     Favourite.favouriteStack1.Children.Add(Favourite.ce1);
-                    like.Opacity = 0;
-                    dislike.Opacity = 100;
-                    checkStatus = true;
+                    favColumn = 1; //Right side
                 }
-                Favourite.ce1.pos = 1;
+                Favourite.check++;
             }
-
-            Favourite.check++;
-
+            checkRefresh();
         }
 
         private void dislike_Click(object sender, RoutedEventArgs e)
         {
-            if (Favourite.ce1.pos == 1)
+            if (checkStatus)
             {
-                if (checkStatus == true)
+                if (favColumn == 1)
                 {
                     Favourite.favouriteStack1.Children.Remove(Favourite.ce1);
-                    ScrollViewer1.ce.checkStatus = false;
-                    ScrollViewer1.ce.like.Opacity = 100;
-                    ScrollViewer1.ce.dislike.Opacity = 0;
-                    Favourite.ce1.pos = 0;
-                    if (Favourite.check % 2 == 0)
-                    {
-                        Favourite.check--;
-                    }
                 }
-            }
-            else if (Favourite.ce1.pos == -1)
-            {
-                if (checkStatus == true)
+                if (favColumn == 0)
                 {
                     Favourite.favouriteStack.Children.Remove(Favourite.ce1);
-                    ScrollViewer1.ce.checkStatus = false;
-                    ScrollViewer1.ce.like.Opacity = 100;
-                    ScrollViewer1.ce.dislike.Opacity = 0;
-                    Favourite.ce1.pos = 0;
-
-                    if (Favourite.check % 2 != 0)
-                    {
-                        Favourite.check--;
-                    }
                 }
+                checkStatus = false;
+                if (favColumn == 1 && Favourite.check % 2 == 0) //Right side
+                {
+                    Favourite.check--;
+                }
+                else if (favColumn == 0 && Favourite.check % 2 != 0) //Left side
+                {
+                    Favourite.check--;
+                }
+                favColumn = -1; //Removed
             }
+            checkRefresh();
+        }
+
+        private void todoAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!todoStatus)
+            {
+                todoStatus = true;
+                if (ToDo.check % 2 == 0) //Left side
+                {
+                    ToDo.todoLeftStack.Children.Add(ToDo.ce1);
+                    todoColumn = 0; //Left side
+                }
+                else //Right side
+                {
+                    ToDo.todoRightStack.Children.Add(ToDo.ce1);
+                    todoColumn = 1; //Right side
+                }
+                ToDo.check++;
+            }
+            checkRefresh();
+        }
+
+        private void todoRemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (todoStatus)
+            {
+                todoStatus = false;
+                if (todoColumn == 1) //Right column
+                {
+                    ToDo.todoRightStack.Children.Remove(ToDo.ce1);
+                }
+                if (todoColumn == 0) //Left column
+                {
+                    ToDo.todoLeftStack.Children.Remove(ToDo.ce1);
+                }
+                todoStatus = false;
+                if (todoColumn == 1 && ToDo.check % 2 == 0) //Right side
+                {
+                    ToDo.check--;
+                }
+                else if (todoColumn == 0 && ToDo.check % 2 != 0) //Left side
+                {
+                    ToDo.check--;
+                }
+                todoColumn = -1; //Removed
+            }
+            checkRefresh();
         }
     }
 }

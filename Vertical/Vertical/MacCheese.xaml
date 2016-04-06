@@ -6,18 +6,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="257" VerticalAlignment="Top" Width="248" Source="Pictures/Recipes/macroni&amp;cheese.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
-        <Label Content="Macaroni and Cheese&#xA;Quick and easy!" HorizontalAlignment="Left" Margin="0,218,0,0" VerticalAlignment="Top" Width="248" Height="56" Foreground="White" Background="#FF423F3F"/>
-        <Button Name="like" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Foreground="{x:Null}" Height="42" BorderBrush="{x:Null}" Click="Button_Click">
+        <Image HorizontalAlignment="Left" Height="249" VerticalAlignment="Top" Width="240" Source="Pictures/Recipes/macroni&amp;cheese.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown" Margin="0,-1,0,0"/>
+        <Button x:Name="like" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Foreground="{x:Null}" Height="41" BorderBrush="{x:Null}" Click="like_Click" Margin="0,-1,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="Pictures/favourite.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="dislike" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Foreground="{x:Null}" Height="42" BorderBrush="{x:Null}" Margin="0,42,0,0" Click="mcbutton1_Click">
+        <Button x:Name="dislike" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Foreground="{x:Null}" Height="41" BorderBrush="{x:Null}" Margin="0,40,0,0" Click="dislike_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Pictures/brokenheart.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
+        <Button x:Name="todoRemove" Content="-" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="50" Margin="190,0,0,204" Height="87" BorderBrush="{x:Null}" Foreground="#FF77EE53" Background="{x:Null}" FontFamily="Segoe UI Symbol" FontSize="66.667" Click="todoRemoveButton_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Button x:Name="todoAdd" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="190,-19,0,0" Height="59" BorderBrush="{x:Null}" Foreground="#FF77EE53" Background="{x:Null}" FontFamily="Segoe UI Symbol" FontSize="40" Click="todoAddButton_Click" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="97" Stroke="White" VerticalAlignment="Top" Width="240" Margin="0,165,0,0"/>
+        <Rectangle Fill="#FFE61A1A" HorizontalAlignment="Left" Height="60" Margin="0,189,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.322"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.494"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="33" Margin="0,229,0,0" VerticalAlignment="Top" Width="178" Source="Pictures/5_Star_Rating_System_4_and_a_half_stars.png" OpacityMask="#FF168505"/>
+        <Canvas Margin="178,229,92,38">
+            <Image x:Name="image1" Height="34" VerticalAlignment="Top" Source="Pictures/clock-128.png" OpacityMask="WhiteSmoke" Width="31"/>
+        </Canvas>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="208,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="White" Height="31" Width="32" FontSize="26.667" Text="44"/>
+        <Label Content="Macaroni and Cheese&#xA;Quick and easy!" HorizontalAlignment="Left" Margin="0,165,0,0" VerticalAlignment="Top" Width="240" Height="38" Foreground="White" Background="#FF423F3F"/>
 
     </Grid>
 </UserControl>

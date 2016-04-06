@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -140,6 +142,9 @@
     <Compile Include="Switcher.cs" />
     <Compile Include="ToDo.xaml.cs">
       <DependentUpon>ToDo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlackBeanPage.xaml.cs">
+      <DependentUpon>BlackBeanPage.xaml</DependentUpon>
     </Compile>
     <Page Include="BeanStat.xaml">
       <SubType>Designer</SubType>
@@ -276,6 +281,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BlackBeanPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -349,8 +358,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Blaze_test1_WMV-WMV9MP_CBR_320x240_AR4to3_15fps_512kbps_WMA9.2L2_32kbps_44100Hz_Mono.wmv" />
+    <Resource Include="Pictures\todoAdd.png" />
+    <Resource Include="Pictures\todoRemove.png" />
+    <Resource Include="Pictures\spinner.gif" />
     <Resource Include="Pictures\5_Star_Rating_System_4_and_a_half_stars.png" />
     <Resource Include="Pictures\5_Star_Rating_System_3_and_a_half_stars.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_0_and_half_star.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_0_stars.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_1_and_a_half_stars.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_1_star.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_2_stars.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_3_stars.png" />
+    <Resource Include="Pictures\5_Star_Rating_System_4_stars.png" />
+    <Resource Include="Pictures\clock-128.png" />
+    <Resource Include="Image1.png" />
     <Content Include="Pictures\How_to_Make_Top_Secret_Garlic_Mashed_Potatoes.wmv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -37,22 +37,16 @@ namespace Vertical
             InitializeComponent();
             favouriteStack = favouritesp;
             favouriteStack1 = favouritesp1;
-            mc1.checkStatus = true;
-            mc1.like.Opacity = 0;
-            mash1.checkStatus = true;
-            mash1.like.Opacity = 0;
-            butterchicken1.like.Opacity = 0;
-            butterchicken1.checkStatus = true;
-            blackbean1.like.Opacity = 0;
-            blackbean1.checkStatus = true;
-            ce1.like.Opacity = 0;
-            ce1.checkStatus = true;
-            hummus1.like.Opacity = 0;
-            hummus1.checkStatus = true;
-            pl1.like.Opacity = 0;
-            pl1.checkStatus = true;
-            sweet1.like.Opacity = 0;
-            sweet1.checkStatus = true;
+
+            //Initalizing instance arrays
+            MacCheese.instanceArray[0] = mc1;
+            BlackBean.instanceArray[0] = blackbean1;
+            ButterChicken.instanceArray[0] = butterchicken1;
+            Enchiladas.instanceArray[0] = ce1;
+            Hummus.instanceArray[0] = hummus1;
+            Mashed.instanceArray[0] = mash1;
+            PorkLoin.instanceArray[0] = pl1;
+            SweetPotato.instanceArray[0] = sweet1;
         }
     }
 }

@@ -7,7 +7,7 @@
              d:DesignHeight="615" d:DesignWidth="480">
     <Grid Background="#FFF0E1E1" Margin="0,-16,0,-492">
         <Label Content="Featured Recipes" HorizontalAlignment="Left" VerticalAlignment="Top" Height="95" Width="470" FontSize="72" FontFamily="Pristina" Margin="0,10,0,0"/>
-        <StackPanel Name="stack" HorizontalAlignment="Left" Height="1349" Margin="0,105,0,-331" VerticalAlignment="Top" Width="235"/>
+        <StackPanel Name="stack" HorizontalAlignment="Left" Height="1232" Margin="0,105,0,-214" VerticalAlignment="Top" Width="235"/>
         <StackPanel x:Name="stack1" HorizontalAlignment="Left" Height="1232" Margin="235,105,0,-214" VerticalAlignment="Top" Width="245"/>
     </Grid>
 </UserControl>

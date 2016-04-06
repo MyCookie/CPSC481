@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace Vertical
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserControl1 : UserControl
     {
-        public static LoginScreen login = new LoginScreen();
-        public static HomeScreen home = new HomeScreen();
-        public MainWindow()
+        public UserControl1()
         {
             InitializeComponent();
-            Switcher.pageSwitcher = this;
-            Switcher.Switch(home);
-
-        }
-
-        public void Navigate(UserControl nextPage)
-        {
-            this.Content = nextPage;
         }
     }
 }

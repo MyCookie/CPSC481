@@ -6,18 +6,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="257" VerticalAlignment="Top" Width="250" Source="Pictures/Recipes/hummus.jpg" Stretch="UniformToFill"/>
-        <Label Content="Hummus&#xA;Nice creamy hummus with your pita!" HorizontalAlignment="Left" Margin="0,218,0,0" VerticalAlignment="Top" Width="250" Height="56" Foreground="White" Background="#FF423F3F"/>
-        <Button x:Name="like" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Foreground="{x:Null}" Height="42" BorderBrush="{x:Null}" Click="like_Click">
+        <Image HorizontalAlignment="Left" Height="245" VerticalAlignment="Top" Width="238" Source="Pictures/Recipes/hummus.jpg" Stretch="UniformToFill" Margin="0,-1,0,0"/>
+        <Button x:Name="like" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Foreground="{x:Null}" Height="40" BorderBrush="{x:Null}" Click="like_Click" Margin="0,-1,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="Pictures/favourite.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Button x:Name="dislike" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Foreground="{x:Null}" Height="42" BorderBrush="{x:Null}" Margin="0,42,0,0" Click="dislike_Click">
+        <Button x:Name="dislike" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Foreground="{x:Null}" Height="40" BorderBrush="{x:Null}" Margin="0,39,0,0" Click="dislike_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Pictures/brokenheart.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
+        <Button x:Name="todoRemove" Content="-" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="49" Margin="187,0,0,206" Height="85" BorderBrush="{x:Null}" Foreground="#FF77EE53" Background="{x:Null}" FontFamily="Segoe UI Symbol" FontSize="66.667" Click="todoRemoveButton_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Button x:Name="todoAdd" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="49" Margin="187,-19,0,0" Height="58" BorderBrush="{x:Null}" Foreground="#FF77EE53" Background="{x:Null}" FontFamily="Segoe UI Symbol" FontSize="40" Click="todoAddButton_Click" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="84" Stroke="White" VerticalAlignment="Top" Width="238" Margin="0,178,0,0"/>
+        <Rectangle Fill="#FFE61A1A" HorizontalAlignment="Left" Height="52" Margin="0,178,0,0" VerticalAlignment="Top" Width="219"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="32" Margin="0,230,0,0" VerticalAlignment="Top" Width="175" Source="Pictures/5_Star_Rating_System_3_stars.png" OpacityMask="#FF168505"/>
+        <Canvas Margin="175,230,95,38">
+            <Image x:Name="image1" Height="34" VerticalAlignment="Top" Source="Pictures/clock-128.png" OpacityMask="Red" Width="31"/>
+        </Canvas>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="205,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="White" Height="32" Width="31" FontSize="26.667"><Run Text="35"/><LineBreak/><Run/></TextBlock>
+        <Label Content="Hummus&#xA;Nice creamy hummus with your pita!" HorizontalAlignment="Left" Margin="-2,168,0,0" VerticalAlignment="Top" Width="240" Height="47" Foreground="White" Background="#FF423F3F"/>
 
     </Grid>
 </UserControl>

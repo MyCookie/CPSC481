@@ -36,5 +36,10 @@ namespace Vertical
         {
             Switcher.Switch(new MashIng());
         }
+        
+        private void morePictures_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new MoreMashPictures());
+        }
     }
 }

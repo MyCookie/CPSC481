@@ -20,85 +20,153 @@ namespace Vertical
     /// </summary>
     public partial class SweetPotato : UserControl
     {
-        public Boolean checkStatus = false;
-        public int pos = 0;
-        public static int Sweettime = 5;
-        public static string[] Sweetattributes = new string[6];
+        public static bool checkStatus = false;
+        public static bool todoStatus = false;
+        public static int favColumn = -1; //Not in list
+        public static int todoColumn = -1; //Not in list
+
+
+        // 0 = Favourite; 1 = Todo; 2 = Home; 3 = Search
+        public static SweetPotato[] instanceArray = new SweetPotato[4];
+
+        //Sorting variables
+        public static int time = 46;
+        public static int difficulty = 16;
+        public static int ingredients = 12;
+
+        public static string[] attributes = new string[6]; //UNFINISHED
         public SweetPotato()
         {
             InitializeComponent();
-            Sweetattributes[0] = "mashed";
-            Sweetattributes[1] = "milk";
-            Sweetattributes[2] = "butter";
-            Sweetattributes[3] = "sugar";
-            Sweetattributes[4] = "sweet potato";
-            Sweetattributes[5] = "flour";
+            attributes[0] = "mashed";
+            attributes[1] = "milk";
+            attributes[2] = "butter";
+            attributes[3] = "sugar";
+            attributes[4] = "sweet potato";
+            attributes[5] = "flour";
+            //UNFINISHED
 
+        }
+
+
+        private void checkRefresh()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (checkStatus)
+                {
+                    instanceArray[i].like.Opacity = 0;
+                    instanceArray[i].dislike.Opacity = 100;
+                }
+                else
+                {
+                    instanceArray[i].like.Opacity = 100;
+                    instanceArray[i].dislike.Opacity = 0;
+                }
+                if (todoStatus)
+                {
+                    instanceArray[i].todoAdd.Opacity = 0;
+                    instanceArray[i].todoRemove.Opacity = 100;
+                }
+                else
+                {
+                    instanceArray[i].todoAdd.Opacity = 100;
+                    instanceArray[i].todoRemove.Opacity = 0;
+                }
+            }
         }
 
         private void like_Click(object sender, RoutedEventArgs e)
         {
-            if (Favourite.check % 2 == 0)
+            if (!checkStatus)
             {
-                if (checkStatus == false)
+                checkStatus = true;
+                if (Favourite.check % 2 == 0) //Left side
                 {
                     Favourite.favouriteStack.Children.Add(Favourite.sweet1);
-                    like.Opacity = 0;
-                    dislike.Opacity = 100;
-                    checkStatus = true;
-
+                    favColumn = 0; //Left side
                 }
-                Favourite.ce1.pos = -1;
-            }
-            else
-            {
-                if (checkStatus == false)
+                else //Right side
                 {
                     Favourite.favouriteStack1.Children.Add(Favourite.sweet1);
-                    like.Opacity = 0;
-                    dislike.Opacity = 100;
-                    checkStatus = true;
+                    favColumn = 1; //Right side
                 }
-                Favourite.sweet1.pos = 1;
+                Favourite.check++;
             }
-
-            Favourite.check++;
-
+            checkRefresh();
         }
 
         private void dislike_Click(object sender, RoutedEventArgs e)
         {
-            if (Favourite.sweet1.pos == 1)
+            if (checkStatus)
             {
-                if (checkStatus == true)
+                if (favColumn == 1)
                 {
                     Favourite.favouriteStack1.Children.Remove(Favourite.sweet1);
-                    ScrollViewer1.sweet.checkStatus = false;
-                    ScrollViewer1.sweet.like.Opacity = 100;
-                    ScrollViewer1.sweet.dislike.Opacity = 0;
-                    Favourite.sweet1.pos = 0;
-                    if (Favourite.check % 2 == 0)
-                    {
-                        Favourite.check--;
-                    }
                 }
-            }
-            else if (Favourite.sweet1.pos == -1)
-            {
-                if (checkStatus == true)
+                if (favColumn == 0)
                 {
                     Favourite.favouriteStack.Children.Remove(Favourite.sweet1);
-                    ScrollViewer1.sweet.checkStatus = false;
-                    ScrollViewer1.sweet.like.Opacity = 100;
-                    ScrollViewer1.sweet.dislike.Opacity = 0;
-                    Favourite.sweet1.pos = 0;
-
-                    if (Favourite.check % 2 != 0)
-                    {
-                        Favourite.check--;
-                    }
                 }
+                checkStatus = false;
+                if (favColumn == 1 && Favourite.check % 2 == 0) //Right side
+                {
+                    Favourite.check--;
+                }
+                else if (favColumn == 0 && Favourite.check % 2 != 0) //Left side
+                {
+                    Favourite.check--;
+                }
+                favColumn = -1; //Removed
             }
+            checkRefresh();
+        }
+
+        private void todoAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!todoStatus)
+            {
+                todoStatus = true;
+                if (ToDo.check % 2 == 0) //Left side
+                {
+                    ToDo.todoLeftStack.Children.Add(ToDo.sweet1);
+                    todoColumn = 0; //Left side
+                }
+                else //Right side
+                {
+                    ToDo.todoRightStack.Children.Add(ToDo.sweet1);
+                    todoColumn = 1; //Right side
+                }
+                ToDo.check++;
+            }
+            checkRefresh();
+        }
+
+        private void todoRemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (todoStatus)
+            {
+                todoStatus = false;
+                if (todoColumn == 1) //Right column
+                {
+                    ToDo.todoRightStack.Children.Remove(ToDo.sweet1);
+                }
+                if (todoColumn == 0) //Left column
+                {
+                    ToDo.todoLeftStack.Children.Remove(ToDo.sweet1);
+                }
+                todoStatus = false;
+                if (todoColumn == 1 && ToDo.check % 2 == 0) //Right side
+                {
+                    ToDo.check--;
+                }
+                else if (todoColumn == 0 && ToDo.check % 2 != 0) //Left side
+                {
+                    ToDo.check--;
+                }
+                todoColumn = -1; //Removed
+            }
+            checkRefresh();
         }
     }
 }
