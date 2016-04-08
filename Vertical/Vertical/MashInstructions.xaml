@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Vertical.MashInstructions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="620" d:DesignWidth="480">
+    <Grid Background="#FFF0E1E1">
+        <Label Content="1" HorizontalAlignment="Left" Margin="214,10,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="Add a pinch of salt to a hot pot of water" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <MediaElement x:Name="video" HorizontalAlignment="Left" Height="258" Margin="10,120,0,0" VerticalAlignment="Top" Width="460" Source="Pictures/How_to_Make_Top_Secret_Garlic_Mashed_Potatoes.wmv" LoadedBehavior="Manual" OpacityMask="White" Position="0:0:23"/>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Margin="81,446,0,0" Height="80" Click="Button_Click"/>
+        <Button Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Margin="260,446,0,0" Height="80" Click="Button_Click_1"/>
+
+    </Grid>
+</UserControl>

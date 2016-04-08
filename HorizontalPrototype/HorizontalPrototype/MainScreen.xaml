@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="HorizontalPrototype.MainScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="689" d:DesignWidth="470" Background="#FFE6E6E6">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="back2.jpg"/>
+        </Grid.Background>
+
+        <StackPanel Name="QuickInfoPanel" HorizontalAlignment="Left" Height="274" Margin="10,65,0,0" VerticalAlignment="Top" Width="450"/>
+        <Button Content="Lasagna                                       25 min" HorizontalAlignment="Left" Margin="10,387,0,0" VerticalAlignment="Top" Width="435" Height="43" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24" Click="Button_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" FontWeight="Bold"/>
+        <Button Content="Spaghetti                                    15 min" HorizontalAlignment="Left" Margin="10,339,0,0" VerticalAlignment="Top" Width="435" Height="43" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24" Click="Button_Click_1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" FontWeight="Bold"/>
+        <Button Content="Linguini                                       15 min" HorizontalAlignment="Left" Margin="10,531,0,0" VerticalAlignment="Top" Width="435" Height="43" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold"/>
+        <Button Content="Penne pesto                                20 min" HorizontalAlignment="Left" Margin="10,435,0,0" VerticalAlignment="Top" Width="435" Height="43" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" FontWeight="Bold"/>
+        <Button Content="Bacon Cheese Burger                 10 min" HorizontalAlignment="Left" Margin="10,483,0,0" VerticalAlignment="Top" Width="435" Height="43" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="24" Click="Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold"/>
+        <Button Content="&#xE11A;" HorizontalAlignment="Left" Margin="395,10,0,0" VerticalAlignment="Top" Width="50" Height="50" FontFamily="Segoe UI Symbol" Background="{x:Null}" FontSize="36" Foreground="#FFFF4949" BorderBrush="{x:Null}" Click="Button_Click_5"/>
+        <Button Content="Log out" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click_2" FontFamily="Segoe UI Symbol" Margin="10,10,0,0" FontSize="16"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4" FontSize="16"/>
+        <Button Content="🍴" HorizontalAlignment="Left" Margin="96,585,0,0" VerticalAlignment="Top" Width="90" Height="67" FontFamily="Segoe UI Symbol" FontSize="36" BorderBrush="White" Foreground="White" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="back2.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="&#xE10F;" HorizontalAlignment="Left" Margin="191,585,0,0" VerticalAlignment="Top" Width="84" Height="67" FontFamily="Segoe UI Symbol" FontSize="36" Foreground="White" Click="Button_Click_2">
+            <Button.Background>
+                <ImageBrush ImageSource="back2.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button Content="&#xE14D;" HorizontalAlignment="Left" Margin="280,585,0,0" VerticalAlignment="Top" Width="88" Height="67" FontFamily="Segoe UI Symbol" FontSize="36" Foreground="White" Click="Button_Click_3">
+            <Button.Background>
+                <ImageBrush ImageSource="back2.jpg"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

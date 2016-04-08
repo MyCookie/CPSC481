@@ -1,0 +1,21 @@
+﻿<UserControl x:Name="SearchResultPageUserControl" x:Class="HorizontalPrototype.SearchResultPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="440" Height="1088" ScrollViewer.VerticalScrollBarVisibility="Auto">
+    <StackPanel x:Name="SearchResultsMainStackPanel" CanVerticallyScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <StackPanel x:Name="SearchResultPanel0" Height="100" UseLayoutRounding="False" ScrollViewer.CanContentScroll="True"/>
+        <StackPanel x:Name="SearchResultPanel1" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel2" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel3" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel4" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel5" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel6" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel7" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel8" Height="100"/>
+        <StackPanel x:Name="SearchResultPanel9" Height="100"/>
+        <Button x:Name="SearchResultLoadNext10" Content="Go to next 10 results" Height="37" />
+        <Button x:Name="SearchResultLoadPrevious10" Content="Go to previous 10 results" Height="33"/>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Vertical.PorkLoin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="247" VerticalAlignment="Top" Width="239" Source="Pictures/Recipes/porkchop.jpg" Stretch="UniformToFill" Margin="0,-1,0,0"/>
+        <Button x:Name="like" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Foreground="{x:Null}" Height="41" BorderBrush="{x:Null}" Click="like_Click" Margin="0,-1,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="Pictures/favourite.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="dislike" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Foreground="{x:Null}" Height="40" BorderBrush="{x:Null}" Margin="0,40,0,0" Click="dislike_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Pictures/brokenheart.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="todoRemove" Content="-" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="50" Margin="188,0,0,205" Height="86" BorderBrush="{x:Null}" Foreground="#FF77EE53" Background="{x:Null}" FontFamily="Segoe UI Symbol" FontSize="66.667" Click="todoRemoveButton_Click" VerticalContentAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Button x:Name="todoAdd" Content="+" HorizontalAlignment="Left" Width="50" Margin="188,-19,0,260" BorderBrush="{x:Null}" Foreground="#FF77EE53" Background="{x:Null}" FontFamily="Segoe UI Symbol" FontSize="40" Click="todoAddButton_Click" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="75" Stroke="White" VerticalAlignment="Top" Width="239" Margin="0,205,0,0"/>
+        <Rectangle Fill="#FFE61A1A" HorizontalAlignment="Left" Height="57" Margin="0,205,0,0" VerticalAlignment="Top" Width="121"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="33" Margin="0,247,0,0" VerticalAlignment="Top" Width="177" Source="Pictures/5_Star_Rating_System_3_and_a_half_stars.png" OpacityMask="#FF168505"/>
+        <Canvas Margin="177,247,94,20">
+            <Image x:Name="image1" Height="33" VerticalAlignment="Top" Source="Pictures/clock-128.png" OpacityMask="WhiteSmoke" Width="29"/>
+        </Canvas>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="206,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="White" Height="31" Width="32" FontSize="26.667" Text="55"/>
+        <Label Content="Apple Cider Sauce and Pork Loin&#xA;Delicious meal in under 60 minutes!" HorizontalAlignment="Left" Margin="-1,187,0,0" VerticalAlignment="Top" Width="240" Height="48" Foreground="White" Background="#FF423F3F"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Vertical.SweetStat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Width="249" Height="255" Background="White"/>
+        <Label Content="This is a quick and easy way to &#xA;make macaroni and cheese. &#xA;Enjoy a cheesy meal in no time!&#xA;&#xA;Difficulty&#xA;&#xA;         50 min&#xA;&#xA;Rating&#xA;&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="231" Width="218"/>
+        <Rectangle HorizontalAlignment="Left" Height="22" Margin="79,79,0,0" Stroke="Black" VerticalAlignment="Top" Width="19" OpacityMask="Black" Fill="#FF7EFF12"/>
+        <Rectangle HorizontalAlignment="Left" Height="22" Stroke="Black" VerticalAlignment="Top" Width="80" Margin="98,79,0,0"/>
+        <Image HorizontalAlignment="Left" Height="35" Margin="10,101,0,0" VerticalAlignment="Top" Width="28" Source="Pictures/clock.png"/>
+        <Image HorizontalAlignment="Left" Height="20" Margin="10,162,0,0" VerticalAlignment="Top" Width="100" Source="Pictures/5_Star_Rating_System_3_and_a_half_stars.png"/>
+        <Button Content="Ingredients" HorizontalAlignment="Left" Margin="23,219,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="5.454,1.818" />
+        <Button Content="Cook now!" HorizontalAlignment="Left" Margin="104,190,0,0" VerticalAlignment="Top" Width="91" Height="49"/>
+        <Button Content="More pictures" HorizontalAlignment="Left" Margin="23,190,0,0" VerticalAlignment="Top" Width="75"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="245" Margin="10,10,0,0" VerticalAlignment="Top" Width="211"/>
+
+    </Grid>
+</UserControl>

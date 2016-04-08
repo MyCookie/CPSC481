@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="HorizontalPrototype.IngredientsForLasagna"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="689" d:DesignWidth="470">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="back2.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label Content="Lasagna Ingredients" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" FontSize="48" Background="{x:Null}" Foreground="#FFFF4949"/>
+        <Button Content="Items" HorizontalAlignment="Left" Margin="57,102,0,0" VerticalAlignment="Top" Width="102" FontSize="36" Background="{x:Null}" Foreground="#FFFDFDFD" BorderBrush="{x:Null}" FontWeight="Bold" Click="Button_Click"/>
+        <CheckBox Name="PastaCheck" Content="Pasta" HorizontalAlignment="Left" Margin="57,195,0,0" VerticalAlignment="Top" Background="White" Foreground="White"/>
+        <CheckBox Name="TamotoCheck" Content="Tomato Sauce&#xD;&#xA;" HorizontalAlignment="Left" Margin="57,234,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox Name="MeatCheck" Content="Meat" HorizontalAlignment="Left" Margin="57,277,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox Name="MushroomCheck" Content="Mushrooms" HorizontalAlignment="Left" Margin="57,328,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox Name="CheeseCheck" Content="Cheese" HorizontalAlignment="Left" Margin="57,369,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox Name="BasilCheck" Content="Basil" HorizontalAlignment="Left" Margin="57,420,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="100 grams" HorizontalAlignment="Left" Margin="302,184,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="500 ml" HorizontalAlignment="Left" Margin="302,228,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="1 lbs" HorizontalAlignment="Left" Margin="302,277,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="3 oz" HorizontalAlignment="Left" Margin="302,322,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="100 grams" HorizontalAlignment="Left" Margin="302,369,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="1 oz" HorizontalAlignment="Left" Margin="302,414,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="275,102,0,0" VerticalAlignment="Top" OpacityMask="White" Foreground="White" FontSize="36" FontWeight="Bold"/>
+        <Button Content="Add to grocery list" HorizontalAlignment="Left" Margin="165,616,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click_2"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+
+    </Grid>
+</UserControl>
